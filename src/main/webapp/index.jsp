@@ -12,7 +12,10 @@
 <p>Opciones sobre la base de datos Cloudant versión 2019:</p>
 <ul>
 <li><a href="listar">Listar</a></li>
-<li><a href="insertar?palabra=Antonio">Insertar</a></li>
+<form action="insertar?palabra.value">
+	<input type="text" name="palabra" value="">
+	<button  value="value" name="name" type=submit >Guardar en base </button> 
+</form> 
 </ul>
 </body>
 </html>

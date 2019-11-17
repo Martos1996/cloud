@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import asr.proyectoFinal.dao.CloudantPalabraStore;
+import asr.proyectoFinal.services.Traductor;
 import asr.proyectoFinal.dominio.Palabra;
 
 /**
@@ -50,6 +51,7 @@ public class Controller extends HttpServlet {
 
 				if(parametro==null)
 				{
+				
 					out.println("usage: /insertar?palabra=palabra_a_traducir");
 				}
 				else
@@ -60,6 +62,7 @@ public class Controller extends HttpServlet {
 					}
 					else
 					{
+						parametro = Traductor.translate(parametro,"es","en",false);
 						palabra.setName(parametro);
 						store.persist(palabra);
 					    out.println(String.format("Almacenada la palabra: %s", palabra.getName()));			    	  
