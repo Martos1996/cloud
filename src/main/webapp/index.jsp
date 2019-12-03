@@ -33,9 +33,9 @@ function statusChangeCallback(response) {
 
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '680496512439969',
+      appId      : '553509792090700',
       cookie     : true,   // Enable cookies to allow the server to access the session.
-	  secret     :'a1d0c005b7bde6b6535ce7850e762b4d',
+	  secret     :'ff961a31f937c8db001ea75ae27e518f',
       xfbml      : true,                     // Parse social plugins on this webpage.
       version    : 'v5.0'           // Use this Graph API version for this call.
     });
