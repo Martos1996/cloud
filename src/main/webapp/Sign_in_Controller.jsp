@@ -9,23 +9,45 @@ pageEncoding="ISO-8859-1"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Opciones de usuario</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<title style="text-align: center">Opciones de usuario</title>
 
 </head>
 <body>
 <%
 String access_token=(String)request.getParameter("access_token");
 %>
+<div align="center">
 <h1>Gracias por loguearte con Facebook</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
 
+<br>
+<div style="border:1px solid #1E679A; width:30%">
 <form action="desplegaFotosAlbum.jsp">
+<br>
+	<p style="color:blue;">Analisis de fotos mediante Visual Recognition</p>
 	<input type="hidden" name="token" value=<%=access_token%>> 
 	<button  type="submit" name="submit" >Evaluacion de fotos</button> 
 
 </form> 
+
+</div>
+<div style="border:1px solid #1E679A; width:30% ">
 <form action="DesplegaFotos.jsp">
+
+	<p style="color:blue;">Analisis de comentarios de fotos mediante Tone Analizer</p>
 	<input type="hidden" name="token" value=<%=access_token%>> 
 	<button  type=submit name="submit">Evaluacion de Comentarios</button> 
 </form> 
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</div>
 </body>
 </html>
